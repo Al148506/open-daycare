@@ -53,6 +53,12 @@ npx eslint app         # lint only your code
 - `/spec-impl` works on branch `spec-NN-slug` (default branch is `master`), implements **one plan step at a time** and pauses for diff review, and **never commits**. Committing is the user's call.
 - Out-of-scope requests go to a follow-up spec, not into the code on the current branch.
 
+## Spec verification
+
+- Agent `spec-verifier` in `.opencode/agent/spec-verifier.md` (`mode: all`): verifies, fixes, and ticks the `## Acceptance criteria` checkboxes of a spec in `specs/`. It marks `[x]` only with evidence (command green, DOM snapshot, screenshot visually compared) — never by deduction — corrects failures with the minimal in-scope change, and never commits.
+- Command `/verify-spec <NN|ruta>` in `.opencode/command/verify-spec.md` runs that agent against a spec (e.g. `/verify-spec 01`). Ask for the spec if the argument is empty.
+- Its verification methods: static inspection (Read/Grep), `npx tsc --noEmit` and `npx eslint app`, Next.js good-practice checks via Context7 (preferring bundled `node_modules/next/dist/docs/`), and Playwright MCP visual comparison against `references/screenshots/*.png` / `references/pantallas/*.dc.html` rendered via `file://`.
+
 ## Playwright / MCP
 
 - Every Playwright artifact (screenshots, traces, console logs, snapshots) must land in `.playwright-mcp/` — it is gitignored. (`home.png` at the repo root is a tracked leftover; don't add more like it.)

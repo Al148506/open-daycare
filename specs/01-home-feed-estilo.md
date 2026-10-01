@@ -81,24 +81,24 @@ Convenciones:
 
 ## Acceptance criteria
 
-- [ ] `npm run dev` sirve `/` sin errores en la terminal ni en la consola del navegador.
-- [ ] El fondo es `#F6ECDF` y no cambia con el tema oscuro del sistema.
-- [ ] Los títulos usan Fredoka y el resto del texto Nunito.
-- [ ] A 1280x800, `/` se ve igual que `references/screenshots/feed.png`: mismo sidebar de 248px, misma columna de 760px, mismas 3 tarjetas en el mismo orden.
-- [ ] El sidebar muestra logo, botón "Nueva publicación", 4 ítems de nav con "Feed" resaltado, y el pie "Caro Giménez / Maestra · Soles" con logout.
-- [ ] La cabecera muestra "GUARDERÍA · SALA SOLES", "Buenas, Caro" y "12 niños · martes 17 jun".
-- [ ] Se renderizan 3 publicaciones — logro (Mateo, 14:20, sin foto), actividad (Mateo, 09:40, con foto) y anuncio general (07:50) — cada una con su chip y su avatar.
-- [ ] Los chips muestran "LOGRO", "ACTIVIDAD" y "ANUNCIO" en español aunque `PostType` use valores en inglés.
-- [ ] Ningún identificador del código está en español: nombres de archivo, componentes, tipos, propiedades y funciones.
-- [ ] Los pies muestran reacciones 3 / 5 / 8, comentarios 1 / 2 / 0 y el enlace "Editar".
-- [ ] Ningún botón ni chip cambia de estado al hacer clic.
-- [ ] Ningún enlace apunta a un `.dc.html`; el nav apunta a `/ninos`, `/avisos`, `/mi-cuenta`, `/nueva-publicacion`.
-- [ ] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
-- [ ] `app/page.tsx` ya no contiene el código de ejemplo de create-next-app.
-- [ ] A 1280x800 el aside es una columna sticky de 248px y no hay barra superior ni backdrop.
-- [ ] A 375x812 el aside está fuera de pantalla y la barra superior con hamburguesa ocupa el ancho completo.
-- [ ] Tocar la hamburguesa muestra el aside sobre el contenido con un backdrop; tocar el backdrop, tocar un enlace del nav o presionar Escape lo cierra.
-- [ ] La hamburguesa expone `aria-label` y `aria-expanded` que reflejan el estado del drawer.
+- [x] `npm run dev` sirve `/` sin errores en la terminal ni en la consola del navegador.
+- [x] El fondo es `#F6ECDF` y no cambia con el tema oscuro del sistema.
+- [x] Los títulos usan Fredoka y el resto del texto Nunito.
+- [x] A 1280x800, `/` se ve igual que `references/screenshots/feed.png`: mismo sidebar de 248px, misma columna de 760px, mismas 3 tarjetas en el mismo orden.
+- [x] El sidebar muestra logo, botón "Nueva publicación", 4 ítems de nav con "Feed" resaltado, y el pie "Caro Giménez / Maestra · Soles" con logout.
+- [x] La cabecera muestra "GUARDERÍA · SALA SOLES", "Buenas, Caro" y "12 niños · martes 17 jun".
+- [x] Se renderizan 3 publicaciones — logro (Mateo, 14:20, sin foto), actividad (Mateo, 09:40, con foto) y anuncio general (07:50) — cada una con su chip y su avatar.
+- [x] Los chips muestran "LOGRO", "ACTIVIDAD" y "ANUNCIO" en español aunque `PostType` use valores en inglés.
+- [x] Ningún identificador del código está en español: nombres de archivo, componentes, tipos, propiedades y funciones.
+- [x] Los pies muestran reacciones 3 / 5 / 8, comentarios 1 / 2 / 0 y el enlace "Editar".
+- [x] Ningún botón ni chip cambia de estado al hacer clic.
+- [x] Ningún enlace apunta a un `.dc.html`; el nav apunta a `/ninos`, `/avisos`, `/mi-cuenta`, `/nueva-publicacion`.
+- [x] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
+- [x] `app/page.tsx` ya no contiene el código de ejemplo de create-next-app.
+- [x] A 1280x800 el aside es una columna sticky de 248px y no hay barra superior ni backdrop.
+- [x] A 375x812 el aside está fuera de pantalla y la barra superior con hamburguesa ocupa el ancho completo.
+- [x] Tocar la hamburguesa muestra el aside sobre el contenido con un backdrop; tocar el backdrop, tocar un enlace del nav o presionar Escape lo cierra.
+- [x] La hamburguesa expone `aria-label` y `aria-expanded` que reflejan el estado del drawer.
 
 ## Decisions
 
