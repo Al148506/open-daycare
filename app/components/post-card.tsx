@@ -95,7 +95,7 @@ export function PostCard({ post }: PostCardProps) {
           <>
             <span className="flex-1" />
             <Link
-              href="/nueva-publicacion"
+              href="/new-post"
               className="text-[14px] font-extrabold text-brand-edit"
             >
               Editar

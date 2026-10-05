@@ -85,19 +85,19 @@ Convenciones:
 
 ## Acceptance criteria
 
-- [ ] `/kids` se ve como `references/pantallas/ninos.dc.html`: cabecera con "GESTIÓN" y "Niños", CTA "Agregar niño", buscador, "SALA SOLES · 8 niños" y 8 tarjetas en grilla de 2 columnas a 1280px.
-- [ ] Escribir "mateo" en el buscador deja solo la tarjeta de Mateo (sin distinguir mayúsculas); vaciar el campo restaura las 8.
-- [ ] Cada tarjeta enlaza a su `/kids/{id}` (slug legible) y el CTA "Agregar niño" enlaza a `/kids/new`.
-- [ ] Las tarjetas muestran "MANÍ", "LACTOSA" o "VINCULAR" donde el mock los muestra, y chevron en las restantes; el hover cambia el borde y eleva la tarjeta.
-- [ ] El subtítulo de cada tarjeta dice "N años · M padres vinculados" derivado de los datos, y "sin padres vinculados" para Valentina.
-- [ ] `/kids/mateo-fernandez` se ve como `references/pantallas/perfil-nino.dc.html`: volver a `/kids`, avatar "M" 84px, "Mateo Fernández", "3 años · Sala Soles", "Editar", bloque de alergias con triángulo, filas "12 mar 2022 / Soles / feb 2025", botón "Resumen del día" y padres Lucía (ACTIVA) y Diego (PENDIENTE) con "Vincular otro padre".
-- [ ] `/kids/pepe` (u cualquier id inexistente) devuelve el 404 de Next vía `notFound()`.
-- [ ] Un niño sin `allergyNotes` no renderiza el bloque de alergias.
-- [ ] En `/` el sidebar resalta "Feed"; en `/kids` y `/kids/[id]` resalta "Niños", sin props manuales de estado activo.
-- [ ] Ningún href apunta a `/ninos`, `/avisos`, `/mi-cuenta` o `/nueva-publicacion`: usan `/kids`, `/notices`, `/account` y `/new-post` (también el composer del feed).
-- [ ] A 375x812 el listado usa 1 columna, el perfil apila sus columnas y el drawer del sidebar sigue funcionando.
-- [ ] Ningún identificador, archivo o componente está en español (regla de SPEC 01); solo el copy visible y los valores de datos.
-- [ ] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
+- [x] `/kids` se ve como `references/pantallas/ninos.dc.html`: cabecera con "GESTIÓN" y "Niños", CTA "Agregar niño", buscador, "SALA SOLES · 8 niños" y 8 tarjetas en grilla de 2 columnas a 1280px.
+- [x] Escribir "mateo" en el buscador deja solo la tarjeta de Mateo (sin distinguir mayúsculas); vaciar el campo restaura las 8.
+- [x] Cada tarjeta enlaza a su `/kids/{id}` (slug legible) y el CTA "Agregar niño" enlaza a `/kids/new`.
+- [x] Las tarjetas muestran "MANÍ", "LACTOSA" o "VINCULAR" donde el mock los muestra, y chevron en las restantes; el hover cambia el borde y eleva la tarjeta.
+- [x] El subtítulo de cada tarjeta dice "N años · M padres vinculados" derivado de los datos, y "sin padres vinculados" para Valentina.
+- [x] `/kids/mateo-fernandez` se ve como `references/pantallas/perfil-nino.dc.html`: volver a `/kids`, avatar "M" 84px, "Mateo Fernández", "3 años · Sala Soles", "Editar", bloque de alergias con triángulo, filas "12 mar 2022 / Soles / feb 2025", botón "Resumen del día" y padres Lucía (ACTIVA) y Diego (PENDIENTE) con "Vincular otro padre".
+- [x] `/kids/pepe` (u cualquier id inexistente) devuelve el 404 de Next vía `notFound()`.
+- [x] Un niño sin `allergyNotes` no renderiza el bloque de alergias.
+- [x] En `/` el sidebar resalta "Feed"; en `/kids` y `/kids/[id]` resalta "Niños", sin props manuales de estado activo.
+- [x] Ningún href apunta a `/ninos`, `/avisos`, `/mi-cuenta` o `/nueva-publicacion`: usan `/kids`, `/notices`, `/account` y `/new-post` (también el composer del feed).
+- [x] A 375x812 el listado usa 1 columna, el perfil apila sus columnas y el drawer del sidebar sigue funcionando.
+- [x] Ningún identificador, archivo o componente está en español (regla de SPEC 01); solo el copy visible y los valores de datos.
+- [x] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
 
 ## Decisions
 

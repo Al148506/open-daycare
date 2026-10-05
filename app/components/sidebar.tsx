@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CLASSROOM, TEACHER } from "@/app/data/feed";
 import {
   BellIcon,
@@ -16,11 +19,16 @@ type SidebarProps = {
 };
 
 const NAV_ITEMS = [
-  { label: "Feed", href: "/", icon: HomeIcon, isActive: true },
-  { label: "Niños", href: "/ninos", icon: ChildrenIcon, isActive: false },
-  { label: "Avisos", href: "/avisos", icon: BellIcon, isActive: false },
-  { label: "Mi cuenta", href: "/mi-cuenta", icon: UserIcon, isActive: false },
+  { label: "Feed", href: "/", icon: HomeIcon },
+  { label: "Niños", href: "/kids", icon: ChildrenIcon },
+  { label: "Avisos", href: "/notices", icon: BellIcon },
+  { label: "Mi cuenta", href: "/account", icon: UserIcon },
 ];
+
+function isNavItemActive(href: string, pathname: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 const ITEM_BASE_CLASS =
   "flex items-center gap-3 rounded-xl px-3 py-[11px] text-[14.5px]";
@@ -30,6 +38,8 @@ const ITEM_ACTIVE_CLASS = "bg-brand-tint font-extrabold text-brand-accent";
 const ITEM_IDLE_CLASS = "font-semibold text-ink-nav";
 
 export function Sidebar({ isOpen, onNavigate }: SidebarProps) {
+  const pathname = usePathname();
+
   return (
     <aside
       id="app-sidebar"
@@ -60,7 +70,7 @@ export function Sidebar({ isOpen, onNavigate }: SidebarProps) {
       </Link>
 
       <Link
-        href="/nueva-publicacion"
+        href="/new-post"
         onClick={onNavigate}
         className="mb-[18px] flex w-full items-center justify-center gap-2 rounded-[14px] bg-linear-[180deg] from-brand-cta-top to-brand-cta-bottom px-3 py-3 text-[14.5px] font-extrabold text-white shadow-[0_8px_18px_-8px_rgba(238,129,100,0.75)]"
       >
@@ -69,20 +79,23 @@ export function Sidebar({ isOpen, onNavigate }: SidebarProps) {
       </Link>
 
       <nav className="flex flex-1 flex-col gap-1">
-        {NAV_ITEMS.map(({ label, href, icon: Icon, isActive }) => (
-          <Link
-            key={href}
-            href={href}
-            onClick={onNavigate}
-            aria-current={isActive ? "page" : undefined}
-            className={`${ITEM_BASE_CLASS} ${
-              isActive ? ITEM_ACTIVE_CLASS : ITEM_IDLE_CLASS
-            }`}
-          >
-            <Icon />
-            {label}
-          </Link>
-        ))}
+        {NAV_ITEMS.map(({ label, href, icon: Icon }) => {
+          const isActive = isNavItemActive(href, pathname);
+          return (
+            <Link
+              key={href}
+              href={href}
+              onClick={onNavigate}
+              aria-current={isActive ? "page" : undefined}
+              className={`${ITEM_BASE_CLASS} ${
+                isActive ? ITEM_ACTIVE_CLASS : ITEM_IDLE_CLASS
+              }`}
+            >
+              <Icon />
+              {label}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className="mt-2.5 border-t border-line pt-[14px]">
