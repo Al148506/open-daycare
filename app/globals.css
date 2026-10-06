@@ -37,6 +37,37 @@
   --color-activity-soft: #c7e7f1;
   --color-announcement: #4e72c8;
   --color-announcement-soft: #ccd8f4;
+
+  --color-kid-blue: #a9d9e8;
+  --color-kid-blue-ink: #1f7a93;
+  --color-kid-pink: #f4b8cc;
+  --color-kid-pink-ink: #c44a7a;
+  --color-kid-green: #b9dec4;
+  --color-kid-green-ink: #3e8b62;
+  --color-kid-yellow: #f4dc8e;
+  --color-kid-yellow-ink: #9a7b1e;
+  --color-kid-purple: #c9b6e8;
+  --color-kid-purple-ink: #7b5fc0;
+
+  --color-parent-purple: #c9b6e8;
+  --color-parent-blue: #a9c7e8;
+
+  --color-badge-allergy: #fbd8cc;
+  --color-badge-allergy-ink: #d9684a;
+  --color-badge-link: #f9d2de;
+  --color-badge-link-ink: #c56486;
+  --color-badge-active: #cfebd8;
+  --color-badge-active-ink: #3e9b6c;
+  --color-badge-pending: #f7e7a6;
+  --color-badge-pending-ink: #9a7b1e;
+
+  --color-alert-bg: #fbdad6;
+  --color-alert-icon: #f4a8a0;
+  --color-alert-title: #c5413a;
+  --color-alert-body: #b25249;
+
+  --color-chevron-idle: #cbb89f;
+  --color-kid-hover-line: #f2a78e;
 }
 
 @theme inline {
