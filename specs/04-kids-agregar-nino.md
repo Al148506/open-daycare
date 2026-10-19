@@ -46,16 +46,16 @@ Convenciones:
 
 ## Acceptance criteria
 
-- [ ] El CTA "Agregar niño" de `/kids` navega a `/kids/new` (deja de ser 404) y la pantalla se ve como `agregar-nino.dc.html` a 1280px: tarjeta centrada con borde `line`, cabecera Cancelar/Agregar niño/Guardar y los cinco campos con el copy exacto del mockup.
-- [ ] Las etiquetas de ALERGIAS (ETIQUETAS) y NOTAS MÉDICAS incluyen el marker "(opcional)"; las de nombre, fecha y sala no.
-- [ ] Con nombre o fecha vacíos, "Guardar" no navega y el navegador muestra el aviso nativo de campo obligatorio.
-- [ ] Con nombre y fecha escritos (alergias y notas vacías), "Guardar" navega a `/kids` sin peticiones de red ni errores de consola; nada se persiste (volver a `/kids/new` muestra el formulario vacío).
-- [ ] SALA es un `<select>` real con Soles preseleccionada y las opciones Lunas y Estrellas; cambiarla no rompe nada.
-- [ ] "Cancelar" navega a `/kids`.
-- [ ] `/kids/new` no renderiza el sidebar: es tarjeta centrada sobre fondo `#F6ECDF` a pantalla completa.
-- [ ] A 375x812 la tarjeta ocupa el ancho disponible con su padding y no hay scroll horizontal.
-- [ ] No hay tokens nuevos en `globals.css`; los colores salen de los existentes.
-- [ ] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
+- [x] El CTA "Agregar niño" de `/kids` navega a `/kids/new` (deja de ser 404) y la pantalla se ve como `agregar-nino.dc.html` a 1280px: tarjeta centrada con borde `line`, cabecera Cancelar/Agregar niño/Guardar y los cinco campos con el copy exacto del mockup.
+- [x] Las etiquetas de ALERGIAS (ETIQUETAS) y NOTAS MÉDICAS incluyen el marker "(opcional)"; las de nombre, fecha y sala no.
+- [x] Con nombre o fecha vacíos, "Guardar" no navega y el navegador muestra el aviso nativo de campo obligatorio.
+- [x] Con nombre y fecha escritos (alergias y notas vacías), "Guardar" navega a `/kids` sin peticiones de red ni errores de consola; nada se persiste (volver a `/kids/new` muestra el formulario vacío).
+- [x] SALA es un `<select>` real con Soles preseleccionada y las opciones Lunas y Estrellas; cambiarla no rompe nada.
+- [x] "Cancelar" navega a `/kids`.
+- [x] `/kids/new` no renderiza el sidebar: es tarjeta centrada sobre fondo `#F6ECDF` a pantalla completa.
+- [x] A 375x812 la tarjeta ocupa el ancho disponible con su padding y no hay scroll horizontal.
+- [x] No hay tokens nuevos en `globals.css`; los colores salen de los existentes.
+- [x] `npx tsc --noEmit` y `npx eslint app` terminan sin errores.
 
 ## Decisions
 
