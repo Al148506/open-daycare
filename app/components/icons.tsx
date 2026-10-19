@@ -129,3 +129,11 @@ export function MenuIcon({ size = 20, className }: IconProps) {
     </svg>
   );
 }
+
+export function CheckIcon({ size = 15, className }: IconProps) {
+  return (
+    <svg width={size} height={size} className={className} {...base} strokeWidth={3}>
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
