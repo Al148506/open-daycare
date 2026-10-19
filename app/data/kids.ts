@@ -27,6 +27,8 @@ export interface Kid {
   parents: ParentLink[];
 }
 
+export const CLASSROOMS: string[] = ["Soles", "Lunas", "Estrellas"];
+
 export const KIDS: Kid[] = [
   {
     id: "mateo-fernandez",
